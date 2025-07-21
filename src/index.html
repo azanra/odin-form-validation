@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,58 @@
     <title>Document</title>
   </head>
   <body>
-    <p>Hello World!</p>
-    <img src="./asset/resource/img.png" alt="" />
+    <form novalidate>
+      <div>
+        <label for="email">Email : </label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          required
+          minlength="3"
+          maxlength="30"
+        />
+      </div>
+      <div>
+        <label for="country">Country : </label>
+        <input
+          type="text"
+          name="country"
+          id="country"
+          required
+          minlength="4"
+          maxlength="56"
+        />
+      </div>
+      <div>
+        <label for="postalcode">Postal code : </label>
+        <input type="text" name="postalcode" id="postalcode" required />
+      </div>
+      <div>
+        <label for="password">Password : </label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          required
+          minlength="8"
+          maxlength="64"
+        />
+      </div>
+      <div>
+        <label for="passwordconfirm">Password confirmation : </label>
+        <input
+          type="password"
+          name="passwordconfirm"
+          id="passwordconfirm"
+          required
+          minlength="8"
+          maxlength="64"
+        />
+      </div>
+      <div>
+        <button>Submit</button>
+      </div>
+    </form>
   </body>
 </html>
