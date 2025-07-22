@@ -1,3 +1,4 @@
+import formController from "./formController";
 import "./style.css";
 
-console.log("Hello world!");
+formController.validate();

@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <body>
-    <form novalidate>
+    <form novalidate id="form">
       <div>
         <label for="email">Email : </label>
         <input
@@ -17,6 +17,7 @@
           minlength="3"
           maxlength="30"
         />
+        <p class="emailError"></p>
       </div>
       <div>
         <label for="country">Country : </label>
@@ -30,8 +31,8 @@
         />
       </div>
       <div>
-        <label for="postalcode">Postal code : </label>
-        <input type="text" name="postalcode" id="postalcode" required />
+        <label for="postalCode">Postal code : </label>
+        <input type="text" name="postalCode" id="postalCode" required />
       </div>
       <div>
         <label for="password">Password : </label>
@@ -45,18 +46,18 @@
         />
       </div>
       <div>
-        <label for="passwordconfirm">Password confirmation : </label>
+        <label for="passwordConfirm">Password confirmation : </label>
         <input
           type="password"
-          name="passwordconfirm"
-          id="passwordconfirm"
+          name="passwordConfirm"
+          id="passwordConfirm"
           required
           minlength="8"
           maxlength="64"
         />
       </div>
       <div>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </div>
     </form>
   </body>
