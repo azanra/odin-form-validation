@@ -7,6 +7,7 @@ const formController = (function () {
       e.preventDefault();
     });
     validateEmail();
+    validateCountry();
   };
 
   const validateEmail = () => {
@@ -14,6 +15,14 @@ const formController = (function () {
     const emailErrorMsg = document.querySelector(".emailError");
     email.addEventListener("input", () => {
       validation.check(email, emailErrorMsg);
+    });
+  };
+
+  const validateCountry = () => {
+    const country = document.querySelector("#country");
+    const countryErrorMsg = document.querySelector(".countryError");
+    country.addEventListener("input", () => {
+      validation.check(country, countryErrorMsg);
     });
   };
 
