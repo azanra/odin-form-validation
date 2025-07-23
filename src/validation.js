@@ -10,6 +10,9 @@ const validation = (function () {
       errorElement.textContent = `Entered characted should be at least ${input.maxLength}, Current character are ${input.value.length}`;
     } else if (input.validity.valueMissing) {
       errorElement.textContent = "Field can't be empty";
+    } else if (input.validity.patternMismatch) {
+      errorElement.textContent =
+        "Please enter a proper postal code of your country";
     }
   };
 

@@ -8,6 +8,7 @@ const formController = (function () {
     });
     validateEmail();
     validateCountry();
+    validatePostalCode();
   };
 
   const validateEmail = () => {
@@ -23,6 +24,14 @@ const formController = (function () {
     const countryErrorMsg = document.querySelector(".countryError");
     country.addEventListener("input", () => {
       validation.check(country, countryErrorMsg);
+    });
+  };
+
+  const validatePostalCode = () => {
+    const postalCode = document.querySelector("#postalCode");
+    const postalErrorMsg = document.querySelector(".postalError");
+    postalCode.addEventListener("input", () => {
+      validation.check(postalCode, postalErrorMsg);
     });
   };
 

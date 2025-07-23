@@ -33,7 +33,14 @@
       </div>
       <div>
         <label for="postalCode">Postal code : </label>
-        <input type="text" name="postalCode" id="postalCode" required />
+        <input
+          type="text"
+          name="postalCode"
+          id="postalCode"
+          required
+          pattern="^[A-Za-z0-9][A-Za-z0-9\- ]{0,10}[A-Za-z0-9]$"
+        />
+        <p class="postalError"></p>
       </div>
       <div>
         <label for="password">Password : </label>
