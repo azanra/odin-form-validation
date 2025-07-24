@@ -10,37 +10,43 @@ const formController = (function () {
     validateCountry();
     validatePostalCode();
     validatePassword();
+    validateConfirmPassword();
   };
 
   const validateEmail = () => {
     const email = document.querySelector("#email");
-    const emailErrorMsg = document.querySelector(".emailError");
     email.addEventListener("input", () => {
-      validation.check(email, emailErrorMsg);
+      validation.check(email);
     });
   };
 
   const validateCountry = () => {
     const country = document.querySelector("#country");
-    const countryErrorMsg = document.querySelector(".countryError");
     country.addEventListener("input", () => {
-      validation.check(country, countryErrorMsg);
+      validation.check(country);
     });
   };
 
   const validatePostalCode = () => {
     const postalCode = document.querySelector("#postalCode");
-    const postalErrorMsg = document.querySelector(".postalError");
     postalCode.addEventListener("input", () => {
-      validation.check(postalCode, postalErrorMsg);
+      validation.check(postalCode);
     });
   };
 
   const validatePassword = () => {
     const password = document.querySelector("#password");
-    const passwordError = document.querySelector(".passwordError");
     password.addEventListener("input", () => {
-      validation.check(password, passwordError);
+      validation.check(password);
+    });
+  };
+
+  const validateConfirmPassword = () => {
+    const password = document.querySelector("#password");
+    const passwordConfirm = document.querySelector("#passwordConfirm");
+    passwordConfirm.addEventListener("input", () => {
+      validation.check(passwordConfirm);
+      validation.checkPassword(password, passwordConfirm);
     });
   };
 
