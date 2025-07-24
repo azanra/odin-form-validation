@@ -9,6 +9,7 @@ const formController = (function () {
     validateEmail();
     validateCountry();
     validatePostalCode();
+    validatePassword();
   };
 
   const validateEmail = () => {
@@ -32,6 +33,14 @@ const formController = (function () {
     const postalErrorMsg = document.querySelector(".postalError");
     postalCode.addEventListener("input", () => {
       validation.check(postalCode, postalErrorMsg);
+    });
+  };
+
+  const validatePassword = () => {
+    const password = document.querySelector("#password");
+    const passwordError = document.querySelector(".passwordError");
+    password.addEventListener("input", () => {
+      validation.check(password, passwordError);
     });
   };
 
