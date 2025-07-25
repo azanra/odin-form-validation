@@ -11,6 +11,7 @@ const formController = (function () {
     validatePostalCode();
     validatePassword();
     validateConfirmPassword();
+    onSubmit();
   };
 
   const validateEmail = () => {
@@ -47,6 +48,14 @@ const formController = (function () {
     passwordConfirm.addEventListener("input", () => {
       validation.check(passwordConfirm);
       validation.checkPassword(password, passwordConfirm);
+    });
+  };
+
+  const onSubmit = () => {
+    const submitBtn = document.querySelector("#submitBtn");
+    const form = document.querySelector("#form");
+    submitBtn.addEventListener("click", () => {
+      form.reportValidity();
     });
   };
 
