@@ -56,6 +56,7 @@ const formController = (function () {
     const form = document.querySelector("#form");
     submitBtn.addEventListener("click", () => {
       form.reportValidity();
+      form.checkValidity() && alert("High Five !");
     });
   };
 
