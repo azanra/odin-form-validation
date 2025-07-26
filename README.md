@@ -24,7 +24,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./src/asset/odin-form-ui.png)
+![](./src/asset/odin-form.png)
 
 ### Links
 
